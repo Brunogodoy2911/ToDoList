@@ -21,6 +21,10 @@
   --title-xs: 800 0.75rem/140% var(--font-family);
 }
 
+:focus {
+  outline: transparent;
+}
+
 * {
   margin: 0;
   padding: 0;
