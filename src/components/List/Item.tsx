@@ -1,16 +1,32 @@
 import { Trash } from "phosphor-react";
+import { ITask } from "../../App";
 
 import styles from "./Item.module.css";
 
-export function Item() {
+interface Props {
+  data: ITask;
+  removeTask: (taskId: number) => void;
+  toggleTaskCompletion: (taskId: number, value: boolean) => void;
+}
+
+export function Item({ data, removeTask, toggleTaskCompletion }: Props) {
+  function handleTaskToggle() {
+    toggleTaskCompletion(data.id, !data.completed);
+  }
+
   return (
     <div className={styles.taskContainer}>
-      <input type="checkbox" className={styles.checkbox} />
-      <p>
-        Integer urna interdum massa libero auctor neque turpis turpis semper.
-        Duis vel sed fames integer.
-      </p>
-      <button>
+      <label htmlFor="checkbox" onClick={handleTaskToggle}>
+        <input
+          type="checkbox"
+          readOnly
+          checked={data.completed}
+          className={styles.checkbox}
+        />
+      </label>
+
+      <p className={data.completed ? styles.pChecked : ""}>{data.task}</p>
+      <button onClick={() => removeTask(data.id)}>
         <Trash size={20} />
       </button>
     </div>

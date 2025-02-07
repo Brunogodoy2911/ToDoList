@@ -1,0 +1,29 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding-bottom: 1.5rem;
+}
+
+header p {
+  font: var(--title-sm);
+}
+
+header p:nth-child(1) {
+  color: var(--blue);
+}
+
+header p:nth-child(2) {
+  color: var(--purple);
+}
+
+span {
+  background: var(--gray-400);
+  padding: 0.125rem 0.5rem;
+  font: var(--title-xs);
+  color: var(--gray-200);
+  border-radius: 999px;
+
+  margin-left: 0.5rem;
+}

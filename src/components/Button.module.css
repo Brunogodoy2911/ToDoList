@@ -1,6 +1,7 @@
 .button {
   height: 3.25rem;
   width: 5.625rem;
+  padding: 1rem;
   gap: 0.5rem;
 
   display: flex;

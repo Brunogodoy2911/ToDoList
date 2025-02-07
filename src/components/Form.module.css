@@ -1,8 +1,0 @@
-.formContainer {
-  display: flex;
-  justify-content: center;
-  transform: translateY(-50%);
-
-  gap: 0.5rem;
-  margin-bottom: 3rem;
-}
